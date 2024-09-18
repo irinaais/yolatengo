@@ -1,0 +1,40 @@
+.welcome_title-line {
+  font-size: 220px;
+  color: rgba(237, 118, 30);
+  position: relative;
+  display: block;
+  z-index: 1;
+  opacity: .9;
+  line-height: .9;
+}
+
+.welcome_title-line::before {
+  font-size: 220px;
+  color: rgba(14, 115, 166, .8);
+  content: attr(data-text);
+  transform: translate(22px, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap {
+  gap: 35px;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
