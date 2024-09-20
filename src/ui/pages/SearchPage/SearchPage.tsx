@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useCallback, useEffect, useState } from "react";
 import "./SearchPage.css";
 import SearchForm from "../../components/SeacrhForm/SearchForm";
 import Preloader from "../../components/Preloader/Preloader";
@@ -21,6 +21,20 @@ export default function SearchPage(): ReactElement {
   const isSuccessfullyLoaded = !isLoading && !isError;
   const isErrorLoaded = !isLoading && isError;
 
+  const toggleBannerText = useCallback(() => {
+    if (bannerText === 'Скидка 20% на все товары') {
+      setBannerText('Бесплатная доставка свыше 50 долларов')
+    } else {
+      setBannerText('Скидка 20% на все товары');
+    }
+  }, [bannerText]);
+
+  useEffect(() => {
+    const intervalId = setInterval(toggleBannerText, 2000);
+
+    return () => clearInterval(intervalId);
+  }, [bannerText, toggleBannerText]);
+
   function handleSearchEmail(name: string) {
     setIsLoading(true);
     setIsError(false);
@@ -40,14 +54,6 @@ export default function SearchPage(): ReactElement {
     }, 2000);
   }
 
-  function toggleBannerText(){
-    if (bannerText === 'Скидка 20% на все товары') {
-      setBannerText('Бесплатная доставка свыше 50 долларов')
-    } else {
-      setBannerText('Скидка 20% на все товары');
-    }
-  }
-
   return (
     <main className='search'>
       {isLoading && <Preloader />}
@@ -55,13 +61,13 @@ export default function SearchPage(): ReactElement {
         <>
           <PromotionalBanner text={ bannerText }/>
           <FontSwitch />
-          <SearchForm onSubmit={handleSearchEmail}/>
-          {isEmailsFetched && <EmailsList emailsList={emailsList}/>}
+          <SearchForm onSubmit={ handleSearchEmail }/>
+          { isEmailsFetched && <EmailsList emailsList={ emailsList }/>}
           <LinkTo path='/' text='Вернуться на главную страницу'/>
         </>
       )}
       {isErrorLoaded && (
-        <ErrorList text={textError}/>
+        <ErrorList text={ textError }/>
       )}
     </main>
   );
