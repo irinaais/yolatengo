@@ -6,6 +6,7 @@ import EmailsList from "../../components/EmailList/EmailsList";
 import ErrorList from "../../components/ErrorList/ErrorList";
 import LinkTo from "../../components/LinkTo/LinkTo";
 import { getEmailsList } from "../../../app-components/network/YoulatengoApi";
+import FontSwitch from "../../components/FontSwitch/FontSwitch";
 
 type EmailsListState = string[];
 
@@ -41,13 +42,14 @@ export default function SearchPage(): ReactElement {
       {isLoading && <Preloader />}
       {isSuccessfullyLoaded && (
         <>
-          <SearchForm onSubmit={ handleSearchEmail }/>
-          {isEmailsFetched && <EmailsList emailsList={ emailsList }/>}
-          <LinkTo path='/' text='Вернуться на главную страницу' />
+          <FontSwitch />
+          <SearchForm onSubmit={handleSearchEmail}/>
+          {isEmailsFetched && <EmailsList emailsList={emailsList}/>}
+          <LinkTo path='/' text='Вернуться на главную страницу'/>
         </>
       )}
       {isErrorLoaded && (
-          <ErrorList text={ textError } />
+        <ErrorList text={textError}/>
       )}
     </main>
   );

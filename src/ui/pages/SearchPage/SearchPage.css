@@ -1,4 +1,9 @@
+:root {
+  --app-font: 'Roboto', sans-serif;
+}
+
 .search {
+  font-family: var(--app-font);
   display: flex;
   align-items: center;
   justify-content: center;

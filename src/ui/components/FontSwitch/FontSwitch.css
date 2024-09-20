@@ -1,0 +1,16 @@
+.font-switch {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #6A7039;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+}
