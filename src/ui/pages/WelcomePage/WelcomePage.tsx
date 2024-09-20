@@ -1,11 +1,11 @@
 import { ReactElement } from "react";
 import "./WelcomePage.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function WelcomePage(): ReactElement {
   return (
     <main className='welcome column'>
-      <Link className='link' to={'/search'}>
+      <Link className='link' to={ '/search' }>
         <div className='welcome_title-line' data-text="yo">yo</div>
         <div className='row'>
           <div className='column'>

@@ -31,6 +31,10 @@
   flex-direction: column;
 }
 
+.column p {
+  margin-inline-start: 20px;
+}
+
 .gap {
   gap: 35px;
 }

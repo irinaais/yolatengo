@@ -1,0 +1,9 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px 16px;
+  min-height: 100vh;
+  gap: 40px;
+}

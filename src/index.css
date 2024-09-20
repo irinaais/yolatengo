@@ -30,10 +30,9 @@ li {
 }
 
 p {
-  margin-inline-start: 20px;
   color: black;
 }
 
-.link {
+.link, a {
   text-decoration: none;
 }
