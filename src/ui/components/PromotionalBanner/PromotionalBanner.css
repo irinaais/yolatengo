@@ -1,0 +1,9 @@
+.promotional-banner {
+  margin-block-end: 80px;
+}
+
+.promotional-banner:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
