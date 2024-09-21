@@ -39,16 +39,6 @@
 }
 
 .search-form__button:hover {
-  opacity: 0.7;
-  transition: opacity 0.3s;
+  opacity: .7;
+  transition: opacity .3s;
 }
-
-/*@media screen and (max-width: 767px) {*/
-/*  .search-form__input {*/
-/*    margin: 0 0 15px;*/
-/*  }*/
-
-/*  .search-form__title {*/
-/*    margin: 10px 0 25px;*/
-/*  }*/
-/*}*/
