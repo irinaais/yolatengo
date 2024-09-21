@@ -19,7 +19,7 @@
   display: block;
   z-index: 1;
   opacity: .9;
-  line-height: .9;
+  line-height: .3;
 }
 
 .welcome_title-line::before {
