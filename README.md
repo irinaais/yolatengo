@@ -24,7 +24,7 @@
 
 ### Инструкция по запуску
 1. Склонировать репозиторий
-   `git clone git@github.com:irinaais/yolatengo`
+   `git@github.com:irinaais/yolatengo.git`
 2. Находясь в папке проекта установить зависимости
    `npm install`
 3. Запустить сервер
