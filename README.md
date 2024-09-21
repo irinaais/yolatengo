@@ -5,6 +5,8 @@
 Использовала: `React`, `TypeScript`, `CSS`, `HTML`, `Grid`,
 `Flexbox`, `Адаптивная вёрстка`, `Create-react-app`, `React Hooks`, `MutationObserver`.
 
+[Ссылка на приложение](https://irinaais-yolatengo-480b.twc1.net/)
+
 ### Функциональность
 * поиск e-mail по имени
 * шрифт можно переключить вручную
