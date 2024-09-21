@@ -14,3 +14,7 @@
   cursor: pointer;
   color: black;
 }
+
+.font-switch:focus-visible {
+  outline-color: #6A7039;
+}

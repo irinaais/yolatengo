@@ -1,5 +1,19 @@
+.welcome {
+  block-size: 100vh;
+}
+
+.link {
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-block-end: 30px;
+  padding-inline-start: 5px;
+  gap: 40px;
+}
+
 .welcome_title-line {
-  font-size: 220px;
+  font-size: clamp(100px, 100px + 9vw, 220px);
   color: rgba(237, 118, 30);
   position: relative;
   display: block;
@@ -9,10 +23,10 @@
 }
 
 .welcome_title-line::before {
-  font-size: 220px;
+  font-size: clamp(100px, 100px + 9vw, 220px);
   color: rgba(14, 115, 166, .8);
   content: attr(data-text);
-  transform: translate(22px, 0);
+  transform: translate(18px, 0);
   position: absolute;
   top: 0;
   left: 0;
@@ -33,6 +47,7 @@
 
 .column p {
   margin-inline-start: 20px;
+  font-size: 10px;
 }
 
 .gap {
@@ -41,4 +56,43 @@
 
 .flex-end {
   align-items: flex-end;
+}
+
+@media screen and (min-width: 600px) {
+  .link {
+    align-items: center;
+  }
+
+  .welcome_title-line {
+    align-self: flex-start;
+  }
+
+  .row {
+    align-self: center;
+  }
+
+  .column p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .welcome_title-line {
+    align-self: flex-start;
+    padding-inline-start: 140px;
+  }
+
+  .welcome_title-line::before {
+    align-self: flex-start;
+    padding-inline-start: 140px;
+  }
+
+  .row {
+    align-self: flex-end;
+    padding-inline-end: 140px;
+  }
+
+  .column p {
+    font-size: 14px;
+  }
 }
